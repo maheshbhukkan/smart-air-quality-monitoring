@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather & Air Quality</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+     <!-- Left Section for AQI & Humidity Graphs -->
+     <aside id="left-section">
+        <h2 style="color: #ffcc00;">AQI & Humidity Trends</h2>
+        <div class="chart-container">
+            <canvas id="aqiChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="humidityChart"></canvas>
+        </div>
+    </aside>
+    
+    <aside>
+    <div id="right-section">
+        <h2 style="color: #ffcc00;">Your Location's Air Quality</h2>
+        <div id="live-location"></div>
+        <div id="live-aqi">AQI: --</div>
+        <div id="live-aqi-status">Status: --</div>
+    </div>
+    <div id="map"></div> <!-- Map added here -->
+ </aside>
+ 
+    <div class="container">
+        <h2>🌍 Air Quality Monitor</h2>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button id="searchBtn">Search</button>
+
+        <div class="info" >
+            <h3 id="location">📍 City: --</h3>
+            <p id="oxygen">O₂: -- µg/m³</p>
+            <p id="nitrogen">NO₂: -- µg/m³</p>
+            <p id="pm10">PM10: -- µg/m³</p>
+            <p id="pm2_5">PM2.5: -- µg/m³</p>
+            <p id="temperature">🌡️ Temperature: --°C</p>
+            <p id="humidity">💧 Humidity: --%</p>
+            <p id="weather-condition">🌧️🌈 Condition: --</p>
+            <p id="wind">🌬️ Wind Speed: -- kph</p>
+            <p id="pressure">🌡️ Pressure: -- mBar</p>
+            <p id="uv-index">☀️ UV Index: --</p>
+           
+        </div>
+
+        <div class="air-quality">
+            <h3>🌫️ Air Quality</h3>
+            <p>AQI: <span id="aqi">--</span></p>
+
+            <p>Status: <span id="aqi-status">--</span></p>
+        </div>
+    </div>
+     <!-- Right Section for Live Location -->
+     
+</div>
+
+    
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
